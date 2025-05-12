@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Dress Search by Photo</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+  <h1>Dress Search by Photo</h1>
+  <p>Upload a photo of a dress. The app will search popular shopping websites for similar products.</p>
+</header>
+
+<div id="upload-area" tabindex="0" aria-label="Upload photo of dress">
+  <input type="file" accept="image/*" id="file-input" />
+  <p>Click or Drag & Drop a Photo</p>
+  <small>JPEG, PNG formats accepted</small>
+</div>
+
+<div id="preview-container">
+  <img id="preview-image" alt="Uploaded dress preview" />
+</div>
+
+<button id="search-button" disabled>Search Dress</button>
+
+<div id="results" aria-live="polite" aria-atomic="true"></div>
+
+<footer>
+  &copy; 2025 Dress Search Demo
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
