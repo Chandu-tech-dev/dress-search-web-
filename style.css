@@ -156,7 +156,35 @@
     padding: 15px 0 5px;
     text-align: center;
     user-select: none;
+    
   }
+  #switch-camera{
+    margin-top: 10px;
+    background: #1e90ff;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(30,144,255,0.5);
+    transition: background 0.3s ease;
+  }
+#capture-photo{
+   margin-top: 10px;
+    background: #1e90ff;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(30,144,255,0.5);
+    transition: background 0.3s ease;
+}
+
   @media (max-width: 400px) {
     body {
       padding: 10px 5px;
@@ -168,7 +196,4 @@
       font-size: 1rem;
       padding: 10px;
     }
-  }
-  @keyframes identifier {
-    
   }
