@@ -71,6 +71,13 @@
     reader.readAsDataURL(file);
     searchButton.disabled = false;
     resultsDiv.innerHTML = '';
+
+    // Stop camera stream if active after photo upload
+    if (currentStream) {
+      currentStream.getTracks().forEach(track => track.stop());
+      currentStream = null;
+      video.srcObject = null;
+    }
   }
 
   function simulateSearch(imageFile) {
