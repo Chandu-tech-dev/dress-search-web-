@@ -7,6 +7,7 @@
   const video = document.getElementById('video');
   const switchCameraButton = document.getElementById('switch-camera');
   const capturePhotoButton = document.getElementById('capture-photo');
+  const resetButton = document.getElementById('reset-button');
 
   let uploadedFile = null;
   let currentStream = null;
@@ -210,10 +211,23 @@
     }
   });
 
-  // Start camera on page load
-  switchCameraButton.addEventListener('click', () => {
-   if(!uploadedFile)
+  resetButton.addEventListener('click', () => {
+    // Clear uploaded file and preview
+    uploadedFile = null;
+    previewImage.src = '';
+    previewImage.style.display = 'none';
+    resultsDiv.innerHTML = '';
+    searchButton.disabled = true;
+
+    // Restart camera for new photo capture
     startCamera();
+  });
+
+  // Start camera on page load
+  window.addEventListener('load', () => {
+    if (!uploadedFile) {
+      startCamera();
+    }
   });
 
 })();
