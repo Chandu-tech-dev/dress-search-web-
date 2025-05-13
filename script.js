@@ -204,6 +204,9 @@
   });
 
   // Start camera on page load
-  startCamera();
+  switchCameraButton.addEventListener('click', () => {
+   if(!uploadedFile)
+    startCamera();
+  });
 
 })();
